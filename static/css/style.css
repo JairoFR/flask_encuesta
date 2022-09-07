@@ -1,0 +1,14 @@
+form{
+    background-color: rgb(189, 32, 189);
+}
+@font-face { 
+    font-family: theboldfont; 
+    src: url('THEBOLDFONT.ttf') format('truetype'); 
+} 
+.form-label{
+    color:white;
+    font-weight:bold;
+}
+.h1{
+    font-family: 'theboldfont';
+}

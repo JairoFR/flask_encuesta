@@ -1,0 +1,15 @@
+{% extends "/base.html" %}
+{% block titulo %}{% endblock %}
+
+{% block contenido %}
+
+<div class="container mt-5">
+    <div class="row">
+        <p>nombre:  {{session['name']}}</p>
+        <p>Ubicacion Dojo:  {{session['location']}}</p>
+        <p>Lenguaje Favorito: {{session['favorite']}}</p>
+        <p>Comentario: {{session['comentary']}}</p>
+    </div>
+</div>
+<a href="/">Ir a encuesta</a>
+{% endblock %}

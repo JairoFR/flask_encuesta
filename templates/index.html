@@ -1,0 +1,46 @@
+{% extends "/base.html" %}
+{% block titulo %}{% endblock %}
+
+{% block contenido %}
+<header class="container text-center mt-5">  
+    <div class="row">
+        <h1>Encuesta dojo</h1>
+    </div>
+</header>
+<div class="container mt-3 d-flex p-3 justify-content-center">
+    <div class="row">
+        <form action="/process" method="post">
+            <div class="mb-3  mt-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input name="nombre" type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+            </div>
+            <div class="col-12">
+                <select name="ubicacion" class="form-select " aria-label="Default select example">
+                    <option selected>Ubicacion Dojo</option>
+                    <option value="1">New York</option>
+                    <option value="2">Santiago</option>
+                    <option value="3">California</option>
+                    <option value="3">Silicon Valley</option>
+                    <option value="3">Sidney</option>
+                </select>
+            </div>
+            <div class="col-12 mt-3">
+                <select name="favorito" class="form-select" aria-label="Default select example">
+                    <option selected>Lenguaje favorito</option>
+                    <option value="1">Python</option>
+                    <option value="2">C#</option>
+                    <option value="3">JavaScript</option>
+                    <option value="3">C++</option>
+                    <option value="3">PHP</option>
+                </select>
+            </div>
+            <div class="mb-3 col-12">
+                <label for="exampleFormControlTextarea1" class="form-label mt-3">Comentarios:</label>
+                <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3 mb-3 ms-5">Enviar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
