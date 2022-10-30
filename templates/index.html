@@ -12,11 +12,11 @@
         <form action="/process" method="post">
             <div class="mb-3  mt-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input name="nombre" type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+                <input name="nombre" type="text" class="form-control" id="nombre" aria-describedby="emailHelp" required>
             </div>
             <div class="col-12">
-                <select name="ubicacion" class="form-select " aria-label="Default select example">
-                    <option selected>Ubicacion Dojo</option>
+                <select name="ubicacion" class="form-select" required>
+                    <option value="">Selecciona una ciudad</option>
                     <option value="1">New York</option>
                     <option value="2">Santiago</option>
                     <option value="3">California</option>
@@ -25,8 +25,8 @@
                 </select>
             </div>
             <div class="col-12 mt-3">
-                <select name="favorito" class="form-select" aria-label="Default select example">
-                    <option selected>Lenguaje favorito</option>
+                <select name="favorito" class="form-select" required>
+                    <option value="">Selecciona un lenguaje</option>
                     <option value="1">Python</option>
                     <option value="2">C#</option>
                     <option value="3">JavaScript</option>
@@ -36,9 +36,12 @@
             </div>
             <div class="mb-3 col-12">
                 <label for="exampleFormControlTextarea1" class="form-label mt-3">Comentarios:</label>
-                <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mt-3 mb-3 ms-5">Enviar</button>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+            </div>
+            
         </form>
     </div>
 </div>

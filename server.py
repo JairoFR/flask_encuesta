@@ -2,9 +2,6 @@ from flask import Flask, render_template, redirect, session, request
 app = Flask(__name__)
 app.secret_key = '4511vs5d1v56sv51a' # establece una clave secreta
 
-
-
-
 lenguajes={
     '1': 'Python',
     '2': 'C#',
@@ -27,9 +24,7 @@ def index():
 
 @app.route('/process', methods=['POST'])    
 def procesado():
-
-    print(request.form)
-    print()
+    
     session['name'] = request.form['nombre']
     session['location'] = ciudades[request.form['ubicacion']]
     session['favorite'] = lenguajes[request.form['favorito']]

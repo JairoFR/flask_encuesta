@@ -4,12 +4,17 @@
 {% block contenido %}
 
 <div class="container mt-5">
-    <div class="row">
-        <p>nombre:  {{session['name']}}</p>
-        <p>Ubicacion Dojo:  {{session['location']}}</p>
-        <p>Lenguaje Favorito: {{session['favorite']}}</p>
-        <p>Comentario: {{session['comentary']}}</p>
+    <div class="row d-flex justify-content-center">
+        <div class="col-4">
+            <div class="alert alert-primary" role="alert">
+                <h2> {{session['name'] | title}}</h2>
+                <p class="text-body d">Ubicacion Dojo:  {{session['location']}}</p>
+                <p class="text-body ">Lenguaje Favorito: {{session['favorite']}}</p>
+                <p class="text-body ">Comentario: {{session['comentary']}}</p>
+                <a class="btn btn-primary" href="/">Ir a encuesta</a>
+            </div>
+        </div>
     </div>
 </div>
-<a href="/">Ir a encuesta</a>
+
 {% endblock %}
